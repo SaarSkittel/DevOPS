@@ -1,21 +1,34 @@
-<%@ page language="java"%>
-<%@ page import="java.lang.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Multiplication tables</title>
+</head>
 <body>
-<H1><center>Result for <%=request.getParameter("a1")%></center></H1>
-<%
-int i=Integer.parseInt(request.getParameter("t1"));
-int j=Integer.parseInt(request.getParameter("t2"));
-int k=0;
-String str=request.getParameter("a1");
 
-if(str.equals("add"))
-  k=i+j;
-if(str.equals("mul"))
-  k=i*j;
-if(str.equals("div"))
-  k=i/j;
+<h3>Welcome <%=request.getParameter("uname") %></h3>
+<pre>
+<%
+String value = request.getParameter("number");
+try
+{
+	Integer number = Integer.parseInt(value);
+	for(int i=1;i<=10;i++)
+	{
+		out.println(number + " * " + i +" = " + (number*i)  );
+	}
+}
+catch(NumberFormatException e)
+{
+	out.println("Invalid number");
+}
 %>
-Result is <%=k%>
+<pre>
+<br/>
+<br/>
+<p>&copy 2016 Preetham</p>
+
 </body>
 </html>
