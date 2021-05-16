@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h3>Welcome <%=request.getParameter("uname") %></h3>
+<h3>Welcome to DevOPs project</h3>
 <pre>
 <%
 String value = request.getParameter("number");
