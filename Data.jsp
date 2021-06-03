@@ -25,7 +25,7 @@
             <font color="blue" size="10"> Final Project - Devops </font>
         </h1>
         <h2>
-            <font color="green" size="15"> by Saar Skittel & Ido Amira </font>
+            <font color="green" size="15"> by Saar Skittel and Ido Amira </font>
         </h2>
         <footer>
             <p style="font-family:verdana;">
